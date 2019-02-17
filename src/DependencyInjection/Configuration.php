@@ -33,16 +33,16 @@ class Configuration implements ConfigurationInterface
 
         $rootNode
             ->children()
-            ->scalarNode('aws_s3_key')->info("Your AWS Access id/key")
+            ->scalarNode('amazon_s3_key')->info("Your AWS Access id/key")
             ->cannotBeEmpty()
             ->end()
-            ->scalarNode('aws_s3_secret')->info("Your AWS Secret Key")
+            ->scalarNode('amazon_s3_secret')->info("Your AWS Secret Key")
             ->cannotBeEmpty()
             ->end()
-            ->scalarNode('aws_s3_region')->info('Your Aws Region')
+            ->scalarNode('amazon_s3_region')->info('Your Aws Region')
             ->cannotBeEmpty()
             ->end()
-            ->scalarNode('aws_s3_bucket')
+            ->scalarNode('amazon_s3_bucket')
             ->cannotBeEmpty()
             ->end()
             ->end();

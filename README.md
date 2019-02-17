@@ -33,19 +33,19 @@ You must provided the following parameters:
 
 ```yaml
 
-amazon_s3.key: (your key)
-amazon_s3.secret: (your secret)
-amazon_s3.region:  (your region)
-amazon_s3.bucket: (your bucket name without s3://)
+amazon_s3_key: (your key)
+amazon_s3_secret: (your secret)
+amazon_s3_region:  (your region)
+amazon_s3_bucket: (your bucket name without s3://)
 ```
 
 Then your config.yml add the following configuration:
 ```yaml
 bongo_s3_asset_installer:
-    aws_s3_key: "%amazon_s3.key%"
-    aws_s3_secret: "%amazon_s3.secret%"
-    aws_s3_region: "%amazon_s3.region%"
-    aws_s3_bucket: "%amazon_s3.bucket%"
+    amazon_s3_key: "%amazon_s3.key%"
+    amazon_s3_secret: "%amazon_s3.secret%"
+    amazon_s3_region: "%amazon_s3.region%"
+    amazon_s3_bucket: "%amazon_s3.bucket%"
 ```
 
 Add the assets_base_url in config_prod.yml

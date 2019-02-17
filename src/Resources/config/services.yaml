@@ -1,3 +1,10 @@
+parameters:
+  aws_s3_key: ~
+  aws_s3_secret: ~
+  aws_s3_region: ~
+  aws_s3_bucket: ~
+
+
 services:
     bongo.stream_wrapper:
       class: Bongo\S3AssetInstallerBundle\StreamWrapperAWSS3

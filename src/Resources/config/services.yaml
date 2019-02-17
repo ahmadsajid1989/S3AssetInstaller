@@ -1,21 +1,12 @@
-parameters:
-  amazon_s3_key: ~
-  amazon_s3_secret: ~
-  amazon_s3_region: ~
-  amazon_s3_bucket: ~
-
-
 services:
     bongo.stream_wrapper:
       class: Bongo\S3AssetInstallerBundle\StreamWrapperAWSS3
-      arguments: ['%amazon_s3_key%',"%amazon_s3_secret%","%amazon_s3_region%"]
+      arguments: ['%bongo_s3_asset_installer.amazon_s3_key%',"%bongo_s3_asset_installer.amazon_s3_secret%","%bongo_s3_asset_installer.amazon_s3_region%"]
 
-    bongo.asset.aws_s3.client:
+    bongo.s3client:
       class: Aws\S3\S3Client
-      factory: [Aws\S3\S3Client, 'factory']
+      factory: [Aws\S3\S3Client, factory]
       arguments:
-        - version: latest
-          region: '%amazon_s3_region%'
-          credentials:
-            key: '%amazon_s3_key%'
-            secret: '%amazon_s3_secret%'
+          - version: latest
+            region: "%bongo_s3_asset_installer.amazon_s3_region%"
+            credentials: { key: "%bongo_s3_asset_installer.amazon_s3_key%", secret: "%bongo_s3_asset_installer.amazon_s3_secret%" }

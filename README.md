@@ -1,7 +1,7 @@
 #Symfony S3 Asset Installer
 
 This bundle adds a console command to facilate the the asset synchronization between your local file system to amazon S3.
-The benefit of using this bundle is, it doesnt create ugly keys in s3 bucket. and lets you use isolate your production and dev assets.
+The benefit of using this bundle is, it doesnt create ugly keys in s3 bucket. and lets you isolate your production and dev assets.
 
 The installation is very simple. First install the package using composer.
 

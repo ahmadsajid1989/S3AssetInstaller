@@ -33,11 +33,12 @@ class StreamWrapperAWSS3
     public function __construct($key, $secret, $region) {
 
         $aws = array(
-            'key'    => $key,
-            'secret' => $secret,
-            'region' => $region,
-            'version' => 'latest'
-
+            'version' => 'latest',
+            'region'  => $region,
+            'credentials' => array(
+                'key' => $key,
+                'secret'  => $secret,
+                )
         );
 
         $this->s3Client = new S3Client($aws);

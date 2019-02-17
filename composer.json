@@ -1,0 +1,21 @@
+{
+    "name": "bongo/bongo-s3asset-installer-bundle",
+    "description": "This bundle will upload your symfony web apps assets to amazon s3 easily",
+    "type": "symfony-bundle",
+    "require": {
+        "php": "^7.1.3",
+        "aws/aws-sdk-php": "^3.87"
+    },
+    "autoload": {
+        "psr-4": {
+            "Bongo\\S3AssetInstallerBundle\\": "src/"
+        }
+    },
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Ahmad Sajid",
+            "email": "ahmadsajid1989@gmail.com"
+        }
+    ]
+}

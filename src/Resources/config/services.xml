@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<container xmlns="http://symfony.com/schema/dic/services"
+           xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+           xsi:schemaLocation="http://symfony.com/schema/dic/services
+        http://symfony.com/schema/dic/services/services-1.0.xsd">
+
+    <services>
+        <service id="bongo.stream_wrapper" class="Bongo\S3AssetInstallerBundle\StreamWrapperAWSS3">
+            <argument key="$key">%amazon_s3.key%</argument>
+            <argument key="$secret">%amazon_s3.secret%</argument>
+            <argument key="$region">%amazon_s3.region%</argument>
+        </service>
+    </services>
+</container>

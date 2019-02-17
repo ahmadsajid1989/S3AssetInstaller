@@ -32,7 +32,7 @@ class AssetInstallS3Command extends ContainerAwareCommand
     {
         $targetArg = rtrim($input->getArgument('target'), '/');
         $this->filesystem = $this->getContainer()->get('filesystem');
-        $client = $this->getContainer()->get('asset.aws_s3.client');
+        $client = $this->getContainer()->get('bongo.asset.aws_s3.client');
         $bundlesDir = $targetArg.'/bundles/';
 
         $io = new SymfonyStyle($input, $output);

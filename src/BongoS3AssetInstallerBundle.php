@@ -16,9 +16,9 @@ class BongoS3AssetInstallerBundle extends Bundle
     public function boot()
     {
         parent::boot();
-        $key = $this->container->getParameter('bongo_s3_asset_installer.aws_s3_key');
-        $secret = $this->container->getParameter('bongo_s3_asset_installer.aws_s3_secret');
-        $region = $this->container->getParameter('bongo_s3_asset_installer.aws_s3_region');
+        $key = $this->container->getParameter('bongo_s3_asset_installer.amazon_s3_key');
+        $secret = $this->container->getParameter('bongo_s3_asset_installer.amazon_s3_secret');
+        $region = $this->container->getParameter('bongo_s3_asset_installer.amazon_s3_region');
 
         $s3Client = new StreamWrapperAWSS3($key, $secret, $region);
         $s3Client->registerStreamWrapper();

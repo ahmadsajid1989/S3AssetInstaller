@@ -33,10 +33,10 @@ class BongoS3AssetInstallerExtension extends Extension
         $configuration = $this->getConfiguration($configs, $container);
         $config = $this->processConfiguration($configuration, $configs);
 
-        $container->setParameter('bongo_s3_asset_installer.amazon.s3.key', $config['aws_s3.key']);
-        $container->setParameter('bongo_s3_asset_installer.aws_s3.secret', $config['aws_s3.secret']);
-        $container->setParameter('bongo_s3_asset_installer.aws_s3.region', $config['aws_s3.region']);
-        $container->setParameter('bongo_s3_asset_installer.aws_s3.bucket',$config['aws_s3.bucket']);
+        $container->setParameter('bongo_s3_asset_installer.amazon_s3_key', $config['amazon_s3_key']);
+        $container->setParameter('bongo_s3_asset_installer.amazon_s3_secret', $config['amazon_s3_secret']);
+        $container->setParameter('bongo_s3_asset_installer.amazon_s3_region', $config['amazon_s3_region']);
+        $container->setParameter('bongo_s3_asset_installer.amazon_s3_bucket',$config['amazon_s3_bucket']);
 
     }
 }
